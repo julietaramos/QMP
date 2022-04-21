@@ -1,0 +1,123 @@
+public class Prenda {
+	private Categoria categoria;
+	private String tipo;
+	private String tela;
+	private Color colorPrimario;
+	private Color colorSecundario;
+
+public Prenda(Categoria categoria, String tipo. String tela, Color colorPrimario, Color colorSecundario) {
+	
+	this.categoria= categoria;
+	this.tipo = tipo;
+	this.tela=tela;
+	this.colorPrimario = colorPrimario;
+	this.colorSecundario = colorSecundario;
+	
+	}
+
+
+public Categoria getCategoria() {
+	return categoria;
+}
+
+public String getTipo() {
+	return tipo;
+}
+
+public String getTipo() {
+	return tipo;
+}
+
+public String getTela() {
+	return tela;
+}
+
+public Color getColorPrimario() {
+	return colorPrimario;
+}
+
+public Color getColorSecundario() {
+	return colorSecundario;
+}
+
+}
+
+package atuendos;
+
+public enum Categoria {
+	
+	PARTE_SUPERIOR,
+	CALZADO,
+	PARTE_INFERIOR,
+	ACCESORIO
+}
+
+
+package atuendos;
+
+import java.util.List;
+
+public class Atuendo {
+	private List<Prenda> accesorios;
+	private List<Prenda> prendasParteArriba;
+	private Prenda prendaParteAbajo;
+	private Prenda calzado;
+	
+	public List<Prenda> getAccesorios(){
+		return accesorios;
+	}
+	
+	public void setAccesorios(List<Prenda> accesorios) {
+		this.accesorios = accesorios;
+	}
+	
+	public List<Prenda> getPrendasParteArriba(){
+		return prendasParteArriba;
+	}
+	
+	public void setPrendasParteArriba(List<Prenda> prendasParteArriba) {
+		this.prendasParteArriba = prendasParteArriba;
+	}
+	
+	public Prenda getPrendaParteAbajo() {
+		return prendaParteAbajo;
+	}
+	
+	public void setPrendaParteAbajo(Prenda prendaParteAbajo) {
+		this.prendaParteAbajo = prendaParteAbajo;
+	}
+	
+	public Prenda getCalzado() {
+		return calzado;
+	}
+	
+	public void setCalzado(Prenda calzado) {
+		this.calzado= calzado;
+	}
+	
+
+}
+
+
+package usuario;
+
+import atuendos.Prenda;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class usuario {
+	
+	List<Prenda> guardarropa = new ArrayList<Prenda> ();
+	
+	public Usuario(List<Prenda> prendas) {
+		this.guardarropa=prendas;
+	}
+
+	public void agregarPrendas(Prenda ...prendas) {
+		Collections.addAll(this.guardarropa, prendas);
+	}
+	
+	
+}
